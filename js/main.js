@@ -35,6 +35,6 @@ $(document).ready( function() {
 		setTimeout( reflow, 0 );
 	} );
 	$( '#posts' ).PaRSS(
-		'http://sheandhimcook.blogspot.com/feeds/posts/default', 3, 'M jS g:i a', true
+		'http://collabkit.com/blog/?feed=rss2', 3, 'M jS g:i a', true
 	);
 } );
