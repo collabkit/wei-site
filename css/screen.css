@@ -1,32 +1,32 @@
 @font-face {
     font-family: 'Droid Sans';
-    src: url('fonts/DroidSans-webfont.eot');
-    src: url('fonts/DroidSans-webfont.eot?#iefix') format('eot'),
-         url('fonts/DroidSans-webfont.woff') format('woff'),
-         url('fonts/DroidSans-webfont.ttf') format('truetype'),
-         url('fonts/DroidSans-webfont.svg#webfont6rGBoMAO') format('svg');
+    src: url('../fonts/DroidSans-webfont.eot');
+    src: url('../fonts/DroidSans-webfont.eot?#iefix') format('eot'),
+         url('../fonts/DroidSans-webfont.woff') format('woff'),
+         url('../fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSans-webfont.svg#webfont6rGBoMAO') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Droid Sans';
-    src: url('fonts/DroidSans-Bold-webfont.eot');
-    src: url('fonts/DroidSans-Bold-webfont.eot?#iefix') format('eot'),
-         url('fonts/DroidSans-Bold-webfont.woff') format('woff'),
-         url('fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
-         url('fonts/DroidSans-Bold-webfont.svg#webfontSruMVOI5') format('svg');
+    src: url('../fonts/DroidSans-Bold-webfont.eot');
+    src: url('../fonts/DroidSans-Bold-webfont.eot?#iefix') format('eot'),
+         url('../fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSans-Bold-webfont.svg#webfontSruMVOI5') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Droid Serif';
-    src: url('fonts/DroidSerif-Italic-webfont.eot');
-    src: url('fonts/DroidSerif-Italic-webfont.eot?#iefix') format('eot'),
-         url('fonts/DroidSerif-Italic-webfont.woff') format('woff'),
-         url('fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
-         url('fonts/DroidSerif-Italic-webfont.svg#webfont4lS4gXFH') format('svg');
+    src: url('../fonts/DroidSerif-Italic-webfont.eot');
+    src: url('../fonts/DroidSerif-Italic-webfont.eot?#iefix') format('eot'),
+         url('../fonts/DroidSerif-Italic-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-Italic-webfont.svg#webfont4lS4gXFH') format('svg');
     font-weight: normal;
     font-style: italic;
 }
@@ -103,7 +103,7 @@ a:hover {
 	margin-left: 200px;
 	padding-left: 2.5em;
 	border-left: solid 0.5em #e5e5e5;
-	background-image: url(images/right.png);
+	background-image: url(../images/right.png);
 	background-repeat: no-repeat;
 	background-position: left 1.5em;
 }
@@ -153,7 +153,7 @@ a:hover {
 	}
 
 	#menu a:hover {
-		background-image: url(images/up.png);
+		background-image: url(../images/up.png);
 		background-repeat: no-repeat;
 		background-position: bottom center;
 	}
@@ -168,7 +168,7 @@ a:hover {
 	}
 
 	#menu.fixed ul {
-		background-image: url(images/wei.png);
+		background-image: url(../images/wei.png);
 		background-repeat: no-repeat;
 		background-position: 2.5em 1.25em;
 	}
