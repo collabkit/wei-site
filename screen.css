@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('fonts/DroidSans-webfont.eot');
+    src: url('fonts/DroidSans-webfont.eot?#iefix') format('eot'),
+         url('fonts/DroidSans-webfont.woff') format('woff'),
+         url('fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('fonts/DroidSans-webfont.svg#webfont6rGBoMAO') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('fonts/DroidSans-Bold-webfont.eot');
+    src: url('fonts/DroidSans-Bold-webfont.eot?#iefix') format('eot'),
+         url('fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('fonts/DroidSans-Bold-webfont.svg#webfontSruMVOI5') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('fonts/DroidSerif-Italic-webfont.eot');
+    src: url('fonts/DroidSerif-Italic-webfont.eot?#iefix') format('eot'),
+         url('fonts/DroidSerif-Italic-webfont.woff') format('woff'),
+         url('fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+         url('fonts/DroidSerif-Italic-webfont.svg#webfont4lS4gXFH') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Droid Sans", sans-serif;
+	background-color: #808080;
+}
+
+a {
+	color: #666666;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+}
+
+.page {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.content {
+	margin: auto;
+	width: 898px;
+	background-color: #ffffff;
+	box-shadow: 0 0 0.5em #666666;
+	-moz-box-shadow: 0 0 1em #666666;
+	-webkit-box-shadow: 0 0 1em #666666;
+	overflow: hidden;
+}
+
+.buffer {
+	padding: 1em 2.5em;
+}
+
+.anchor {
+	position: absolute;
+	margin-top: -6.875em;
+}
+
+.blue {
+	color: #00b5f6;
+}
+
+.pink {
+	color: #ec0097;
+}
+
+.green {
+	color: #a2d745;
+}
+
+#logo {
+	position: absolute;
+	padding-top: 1.25em;
+}
+
+	#logo.fixed {
+		position: fixed;
+		top: 0;
+	}
+
+#video {
+	box-shadow: 0 0 0.5em #cccccc;
+	-moz-box-shadow: 0 0 1em #cccccc;
+	-webkit-box-shadow: 0 0 1em #cccccc;
+}
+
+#about {
+	margin-left: 200px;
+	padding-left: 2.5em;
+	border-left: solid 0.5em #e5e5e5;
+	background-image: url(images/right.png);
+	background-repeat: no-repeat;
+	background-position: left 1.5em;
+}
+
+#headline {
+	text-transform: lowercase;
+	font-size: 1.5em;
+}
+
+#statement {
+	font-family: "Droid Serif";
+	font-style: italic;
+	color: #666666;
+	width: 350px;
+	line-height: 1.5em;
+}
+
+#menu {
+	position: absolute;
+	margin-top: -6.875em;
+	width: 100%;
+	border-bottom: solid 0.5em #e5e5e5;
+}
+
+	#menu ul {
+		position: relative;
+		margin: auto;
+		padding: 0;
+		padding-top: 1em;
+		width: 898px;
+		list-style: none;
+		text-align: right;
+	}
+
+	#menu li {
+		display: inline-block;
+		list-style: none;
+		font-weight: bold;
+		font-size: 1.5em;
+		margin: 0.5em 1em 0 0;
+	}
+
+	#menu a {
+		display: inline-block;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	#menu a:hover {
+		background-image: url(images/up.png);
+		background-repeat: no-repeat;
+		background-position: bottom center;
+	}
+
+	#menu.fixed {
+		position: fixed;
+		top: 0;
+		margin-top: 0;
+		background-color: #ffffff;
+		opacity: 0.98;
+		-moz-opacity: 0.98;
+	}
+
+	#menu.fixed ul {
+		background-image: url(images/wei.png);
+		background-repeat: no-repeat;
+		background-position: 2.5em 1.25em;
+	}
+
+#mission {
+	background-color: #808080;
+}
+	#mission .content {
+		padding-bottom: 5em;
+	}
+	#mission .buffer {
+		padding-top: 1.5em;
+	}
+
+#demo-page {
+	background-color: #00b5f6;
+}
+
+#opportunities-page {
+	background-color: #ec0097;
+}
+
+#blog-page {
+	background-color: #a2d745;
+}
+
+#posts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#posts li {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+.parss-title {
+	display: block;
+	font-weight: bold;
+	font-size: 1.25em;
+	border-bottom: solid 1px #eeeeee;
+}
+
+.parss-date {
+	float: right;
+	margin-top: -1.25em;
+	color: #999999;
+	font-size: 0.8em;
+}
+
+.parss-description {
+	display: block;
+	margin-top: 0.5em;
+	color: #666666;
+}
+
+#contact-page {
+	background-color: #808080;
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>WEI - Wiki Education Initiative</title>
+		<link rel="stylesheet" href="screen.css" media="all">
+	</head>
+	<body>
+		<div id="mission" class="page">
+			<div class="content">
+				<div class="buffer">
+					<div id="shade"></div>
+					<div id="logo">
+						<img src="images/wei.png" border="0">
+					</div>
+					<div id="about">
+						<h1 id="headline"><span class="blue">Wiki</span> <span class="pink">Education</span> <span class="green">Initiative</span></h1>
+						<p id="statement">Our mission is to provide free worldwide access to personalized media-rich educational content and create collaborative learning tools for students and educators</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav id="menu">
+			<ul>
+				<li><a href="#mission">mission</a></li>
+				<li><a href="#demo">demo</a></li>
+				<li><a href="#opportunities">opportunities</a></li>
+				<li><a href="#blog">blog</a></li>
+			</ul>
+		</nav>
+		<a name="demo" class="anchor"></a>
+		<div id="demo-page" class="page">
+			<div class="content">
+				<div class="buffer">
+					<h2>CollabKit Demo</h2>
+					<p>We are currently working on CollabKit, a learning platform for kids, parents and teachers. This video shows how this system might look when finished, and how people would interact with it.</p>
+					<iframe id="video" src="http://player.vimeo.com/video/22428176?title=0&amp;byline=0&amp;portrait=0" width="814" height="458" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<a name="opportunities" class="anchor"></a>
+		<div id="opportunities-page" class="page">
+			<div class="content">
+				<div class="buffer">
+					<h2>Opportunities</h2>
+					<p>...</p>
+				</div>
+			</div>
+		</div>
+		<a name="blog" class="anchor"></a>
+		<div id="blog-page" class="page">
+			<div class="content">
+				<div class="buffer">
+					<h2>Blog</h2>
+					<ul id="posts"></ul>
+				</div>
+			</div>
+		</div>
+		<a name="contact" class="anchor"></a>
+		<div id="contact-page" class="page">
+			<div class="content">
+				<div class="buffer">
+					<h2>Contact</h2>
+					<p>For more information, please feel free to contact us.</p>
+					<h3>Email:</h3>
+					<blockquote><img src="email.png" border="0"></blockquote>
+					<h3>Snail mail</h3>
+					<blockquote>9220 Sunset Blvd, Suite 225 West Hollywood, CA 90069</blockquote>
+				</div>
+			</div>
+		</div>
+		<script src="jquery.min.js""></script>
+		<script src="jquery.parss.min.js""></script>
+		<script>
+			$(document).ready( function() {
+				var $window = $(window);
+				var elements = {
+					'logo': { '$': $( '#logo' ), 'fixed': null, 'limit': 0, 'hidden': false },
+					'menu': { '$': $( '#menu' ), 'fixed': null, 'limit': 0, 'hide': 'logo' }
+				};
+				function reflow() {
+					for ( key in elements ) {
+						e = elements[key];
+						if ( e.hidden ) {
+							continue;
+						}
+						if ( e.fixed === null ) {
+							e.fixed = $window.scrollTop() >= e.$.offset().top;
+							if ( e.fixed ) {
+								e.$.addClass( 'fixed' );
+								e.limit = e.$.outerHeight();
+							}
+						} else if ( !e.fixed && $window.scrollTop() >= e.$.offset().top ) {
+							e.$.addClass( 'fixed' );
+							e.fixed = true;
+							e.limit = $window.scrollTop();
+						} else if ( e.fixed && $window.scrollTop() < e.limit - 1 ) {
+							e.$.removeClass( 'fixed' );
+							e.fixed = false;
+						}
+						if ( e.hide in elements ) {
+							elements[e.hide].$[e.fixed ? 'hide' : 'show']();
+							elements[e.hide].hidden = e.fixed;
+						}
+					}
+				}
+				$window.bind( 'load scroll mousewheel', reflow );
+				$( 'a[href^=#]' ).click( function() {
+					setTimeout( reflow, 0 );
+				} );
+				$( '#posts' ).PaRSS(
+					'http://sheandhimcook.blogspot.com/feeds/posts/default', 3, 'M jS g:i a', true
+				);
+			} );
+		</script>
+	</body>
+</html>
